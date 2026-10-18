@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harbor Light Community Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .center-and-space-content {
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1 & 5 & 7. Header, Logo ve Başlık -->
+    <header>
+        <div class="center-and-space-content">
+            <img src="https://edube.org/uploads/media/default/0001/04/logo.jpg" alt="Harbor Light Community Center Logo">
+            <h1>Welcome to Harbor Light Community Center</h1>
+        </div>
+    </header>
+
+    <!-- 1 & 5 & 6. Navigasyon ve Çapa Linkler -->
+    <nav role="navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 5. Dekoratif Banner (Ekran okuyuculardan gizlenmiş) -->
+    <div class="banner">
+        <img src="https://edube.org/uploads/media/default/0001/04/decorative-banner.jpg" alt="" aria-hidden="true">
+    </div>
+
+    <!-- 2. Main İçerik Alanı -->
+    <main>
+        <!-- About Us Bölümü -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>The Harbor Light Community Center has been at the heart of our community for over 30 years, offering a wide range of services and programs designed to support and enrich the lives of our residents.</p>
+            <p>
+                <img src="https://edube.org/uploads/media/default/0001/04/community-center.jpg" alt="Harbor Light Community Center People">
+            </p>
+        </section>
+
+        <!-- Our Services Bölümü -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>From educational workshops and sports leagues to wellness programs and art classes, our services are tailored to meet the diverse needs of our community members.</p>
+        </section>
+
+        <!-- 3. Join Our Events Bölümü (Schema.org Microdata ile) -->
+        <section id="events" itemscope itemtype="http://schema.org/Event">
+            <h2>Join Our Events</h2>
+            <p itemprop="description">Our community center is a hub of activity, hosting events throughout the year. Don't miss our annual summer festival for fun, food, and festivities for all ages.</p>
+            <p>
+                <strong>Annual Summer Festival:</strong><br>
+                Starts: <time itemprop="startDate" datetime="2050-07-20">July 20, 2050</time>
+            </p>
+        </section>
+    </main>
+
+    <!-- 4 & 6. İletişim Bölümü ve Footer -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to get involved? <a href="mailto:info@harborlight.com">Email us!</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2050 Harbor Light Community Center</p>
+    </footer>
+
+</body>
+</html>
