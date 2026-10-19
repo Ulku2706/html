@@ -2,35 +2,45 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kadıköy Kültür ve Topluluk Merkezi</title>
     <style>
-        /* İstenen mor tonlu arka plan ve font ayarı */
+        /* Sayfa geneli mor tema */
         body {
             font-family: Arial, sans-serif;
-            background-color: #2b1055; /* Derin ve modern gece moru */
-            color: #f3e8ff; /* Okunabilir açık lavanta / krem yazı rengi */
+            background-color: #2b1055;
+            color: #f3e8ff;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
-        /* 7. Adımda istenen özel sınıf ve ortalama/boşluk kuralı */
+        /* 7. Adımda istenen kural */
         .center-and-space-content {
             text-align: center;
             padding: 10px;
         }
 
+        .center-and-space-content img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #a855f7;
+        }
+
         /* Navigasyon menüsü */
         nav {
-            background-color: #3b146e;
-            padding: 10px 0;
+            background-color: #1e083a;
+            padding: 12px 0;
         }
 
         nav ul {
-            list-style-type: none;
+            list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 25px;
+            gap: 20px;
             justify-content: center;
         }
 
@@ -38,8 +48,7 @@
             color: #d8b4fe;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.05rem;
-            transition: color 0.2s;
+            font-size: 1rem;
         }
 
         nav a:hover {
@@ -47,35 +56,60 @@
             text-decoration: underline;
         }
 
-        /* İçerik kartları ve okunabilirlik düzeni */
+        /* Dekoratif Banner */
+        .banner {
+            max-width: 800px;
+            margin: 20px auto 0;
+            padding: 0 15px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* Ana kutular */
         main, section, footer {
             max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #38156e; /* Gövdeden bir ton açık kutu rengi */
+            padding: 25px;
+            background-color: #3b146e;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
         }
 
-        h1, h2 {
+        .about-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        h1 {
+            color: #f3e8ff;
+            font-size: 1.6rem;
+            margin-top: 10px;
+        }
+
+        h2 {
             color: #e9d5ff;
+            border-bottom: 2px solid #6b21a8;
+            padding-bottom: 8px;
+            margin-top: 0;
         }
 
         a {
             color: #c084fc;
         }
 
-        .banner img {
-            width: 100%;
-            max-height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
         footer {
             text-align: center;
             font-size: 0.9rem;
             color: #c4b5fd;
+            background-color: #1e083a;
         }
     </style>
 </head>
@@ -84,8 +118,8 @@
     <!-- 1, 5 & 7. Header, Logo ve Başlık -->
     <header>
         <div class="center-and-space-content">
-            <img src="https://edube.org/uploads/media/default/0001/04/logo.jpg" alt="Kadıköy Kültür Merkezi Logosu">
-            <h1>Kadıköy Kültür ve Topluluk Merkezi'ne Hoş Geldiniz</h1>
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150" alt="Kadıköy Kültür Merkezi Logosu">
+            <h1>Kadıköy Kültür ve Topluluk Merkezi</h1>
         </div>
     </header>
 
@@ -99,32 +133,32 @@
         </ul>
     </nav>
 
-    <!-- 5. Dekoratif Banner (Ekran okuyuculardan gizlendi) -->
+    <!-- 5. Dekoratif Banner -->
     <div class="banner">
-        <img src="https://edube.org/uploads/media/default/0001/04/decorative-banner.jpg" alt="" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1000" alt="" aria-hidden="true">
     </div>
 
     <!-- 2. Main İçerik Alanı -->
     <main>
-        <!-- Hakkımızda Bölümü -->
+        <!-- Hakkımızda -->
         <section id="about">
             <h2>Hakkımızda</h2>
-            <p>Kadıköy Kültür ve Topluluk Merkezi, 30 yılı aşkın süredir mahallemizin kalbinde yer almakta; semt sakinlerimizin sosyal ve kültürel hayatını zenginleştiren atölyeler, eğitimler ve buluşmalar düzenlemektedir.</p>
+            <p>Kadıköy Kültür ve Topluluk Merkezi, mahallemizin kalbinde yer almakta; semt sakinlerimizin sosyal ve kültürel hayatını zenginleştiren atölyeler, eğitimler ve buluşmalar düzenlemektedir.</p>
             <p>
-                <img src="https://edube.org/uploads/media/default/0001/04/community-center.jpg" alt="Kadıköy Kültür Merkezi Etkinlik Katılımcıları" style="max-width: 100%; border-radius: 8px;">
+                <img class="about-img" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800" alt="Kadıköy Kültür Merkezi Etkinlik Katılımcıları">
             </p>
         </section>
 
-        <!-- Hizmetlerimiz Bölümü -->
+        <!-- Hizmetlerimiz -->
         <section id="services">
             <h2>Hizmetlerimiz</h2>
             <p>Müzik ve sanat atölyelerinden gençlik seminerlerine, dans ve tiyatro buluşmalarından sağlıklı yaşam programlarına kadar toplumun her kesimine hitap eden kapsayıcı etkinlikler sunuyoruz.</p>
         </section>
 
-        <!-- 3. Etkinlikler Bölümü (Schema.org Microdata ile) -->
+        <!-- 3. Etkinlikler (Schema.org Microdata) -->
         <section id="events" itemscope itemtype="http://schema.org/Event">
             <h2>Etkinliklerimize Katılın</h2>
-            <p itemprop="description">Merkezimiz yıl boyunca festivaller, konserler ve panellere ev sahipliği yapmaktadır. Her yaştan komşumuzun bir araya geldiği geleneksel Kadıköy Yaz Festivali'ni kaçırmayın!</p>
+            <p itemprop="description">Merkezimiz yıl boyunca festivaller, konserler ve panellere ev sahipliği yapmaktadır. Geleneksel Kadıköy Yaz Festivali'ni kaçırmayın!</p>
             <p>
                 <strong>Geleneksel Kadıköy Yaz Festivali:</strong><br>
                 Başlangıç: <time itemprop="startDate" datetime="2050-07-20">20 Temmuz 2050</time>
@@ -132,7 +166,7 @@
         </section>
     </main>
 
-    <!-- 4 & 6. İletişim Bölümü -->
+    <!-- 4 & 6. İletişim -->
     <section id="contact">
         <h2>İletişim</h2>
         <p>Sorularınız veya gönüllü çalışmalarımız için bize ulaşın: <a href="mailto:info@kadikoykultur.org.tr">Bize e-posta gönderin!</a></p>
