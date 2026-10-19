@@ -1,88 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Harbor Light Community Center</title>
+    <title>Kadıköy Kültür ve Topluluk Merkezi</title>
     <style>
+        /* İstenen mor tonlu arka plan ve font ayarı */
         body {
             font-family: Arial, sans-serif;
+            background-color: #2b1055; /* Derin ve modern gece moru */
+            color: #f3e8ff; /* Okunabilir açık lavanta / krem yazı rengi */
             margin: 0;
             padding: 0;
         }
+
+        /* 7. Adımda istenen özel sınıf ve ortalama/boşluk kuralı */
         .center-and-space-content {
             text-align: center;
             padding: 10px;
         }
+
+        /* Navigasyon menüsü */
+        nav {
+            background-color: #3b146e;
+            padding: 10px 0;
+        }
+
         nav ul {
             list-style-type: none;
+            margin: 0;
             padding: 0;
             display: flex;
-            gap: 15px;
+            gap: 25px;
             justify-content: center;
+        }
+
+        nav a {
+            color: #d8b4fe;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* İçerik kartları ve okunabilirlik düzeni */
+        main, section, footer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #38156e; /* Gövdeden bir ton açık kutu rengi */
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2 {
+            color: #e9d5ff;
+        }
+
+        a {
+            color: #c084fc;
+        }
+
+        .banner img {
+            width: 100%;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #c4b5fd;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1 & 5 & 7. Header, Logo ve Başlık -->
+    <!-- 1, 5 & 7. Header, Logo ve Başlık -->
     <header>
         <div class="center-and-space-content">
-            <img src="https://edube.org/uploads/media/default/0001/04/logo.jpg" alt="Harbor Light Community Center Logo">
-            <h1>Welcome to Harbor Light Community Center</h1>
+            <img src="https://edube.org/uploads/media/default/0001/04/logo.jpg" alt="Kadıköy Kültür Merkezi Logosu">
+            <h1>Kadıköy Kültür ve Topluluk Merkezi'ne Hoş Geldiniz</h1>
         </div>
     </header>
 
-    <!-- 1 & 5 & 6. Navigasyon ve Çapa Linkler -->
+    <!-- 1, 5 & 6. Navigasyon, ARIA Rolü ve Çapa Linkler -->
     <nav role="navigation">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">Hakkımızda</a></li>
+            <li><a href="#services">Hizmetlerimiz</a></li>
+            <li><a href="#events">Etkinlikler</a></li>
+            <li><a href="#contact">İletişim</a></li>
         </ul>
     </nav>
 
-    <!-- 5. Dekoratif Banner (Ekran okuyuculardan gizlenmiş) -->
+    <!-- 5. Dekoratif Banner (Ekran okuyuculardan gizlendi) -->
     <div class="banner">
         <img src="https://edube.org/uploads/media/default/0001/04/decorative-banner.jpg" alt="" aria-hidden="true">
     </div>
 
     <!-- 2. Main İçerik Alanı -->
     <main>
-        <!-- About Us Bölümü -->
+        <!-- Hakkımızda Bölümü -->
         <section id="about">
-            <h2>About Us</h2>
-            <p>The Harbor Light Community Center has been at the heart of our community for over 30 years, offering a wide range of services and programs designed to support and enrich the lives of our residents.</p>
+            <h2>Hakkımızda</h2>
+            <p>Kadıköy Kültür ve Topluluk Merkezi, 30 yılı aşkın süredir mahallemizin kalbinde yer almakta; semt sakinlerimizin sosyal ve kültürel hayatını zenginleştiren atölyeler, eğitimler ve buluşmalar düzenlemektedir.</p>
             <p>
-                <img src="https://edube.org/uploads/media/default/0001/04/community-center.jpg" alt="Harbor Light Community Center People">
+                <img src="https://edube.org/uploads/media/default/0001/04/community-center.jpg" alt="Kadıköy Kültür Merkezi Etkinlik Katılımcıları" style="max-width: 100%; border-radius: 8px;">
             </p>
         </section>
 
-        <!-- Our Services Bölümü -->
+        <!-- Hizmetlerimiz Bölümü -->
         <section id="services">
-            <h2>Our Services</h2>
-            <p>From educational workshops and sports leagues to wellness programs and art classes, our services are tailored to meet the diverse needs of our community members.</p>
+            <h2>Hizmetlerimiz</h2>
+            <p>Müzik ve sanat atölyelerinden gençlik seminerlerine, dans ve tiyatro buluşmalarından sağlıklı yaşam programlarına kadar toplumun her kesimine hitap eden kapsayıcı etkinlikler sunuyoruz.</p>
         </section>
 
-        <!-- 3. Join Our Events Bölümü (Schema.org Microdata ile) -->
+        <!-- 3. Etkinlikler Bölümü (Schema.org Microdata ile) -->
         <section id="events" itemscope itemtype="http://schema.org/Event">
-            <h2>Join Our Events</h2>
-            <p itemprop="description">Our community center is a hub of activity, hosting events throughout the year. Don't miss our annual summer festival for fun, food, and festivities for all ages.</p>
+            <h2>Etkinliklerimize Katılın</h2>
+            <p itemprop="description">Merkezimiz yıl boyunca festivaller, konserler ve panellere ev sahipliği yapmaktadır. Her yaştan komşumuzun bir araya geldiği geleneksel Kadıköy Yaz Festivali'ni kaçırmayın!</p>
             <p>
-                <strong>Annual Summer Festival:</strong><br>
-                Starts: <time itemprop="startDate" datetime="2050-07-20">July 20, 2050</time>
+                <strong>Geleneksel Kadıköy Yaz Festivali:</strong><br>
+                Başlangıç: <time itemprop="startDate" datetime="2050-07-20">20 Temmuz 2050</time>
             </p>
         </section>
     </main>
 
-    <!-- 4 & 6. İletişim Bölümü ve Footer -->
+    <!-- 4 & 6. İletişim Bölümü -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to get involved? <a href="mailto:info@harborlight.com">Email us!</a></p>
+        <h2>İletişim</h2>
+        <p>Sorularınız veya gönüllü çalışmalarımız için bize ulaşın: <a href="mailto:info@kadikoykultur.org.tr">Bize e-posta gönderin!</a></p>
     </section>
 
+    <!-- 4. Footer -->
     <footer>
-        <p>&copy; 2050 Harbor Light Community Center</p>
+        <p>&copy; 2050 Kadıköy Kültür ve Topluluk Merkezi</p>
     </footer>
 
 </body>
